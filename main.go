@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
+	"os"
 	"sesi1-crud/config"
 	"sesi1-crud/modules/user"
 	"sesi1-crud/utils/database"
+
+	"github.com/gin-gonic/gin"
 )
 
 func init() {
@@ -15,6 +17,8 @@ func init() {
 }
 
 func main() {
+	//cache.LearnRedis()
+	fmt.Println(os.Getenv("DB_HOST"))
 	router := gin.New()
 	db := database.GetDatabase()
 

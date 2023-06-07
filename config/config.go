@@ -1,8 +1,10 @@
 package config
 
 import (
-	"github.com/joho/godotenv"
+	"fmt"
 	"log"
+
+	"github.com/joho/godotenv"
 )
 
 type Configuration struct {
@@ -37,6 +39,7 @@ func SetupConfiguration() {
 	Config.Server.Port = envs["PORT"]
 	Config.Database.DBHost = envs["DB_HOST"]
 	Config.Database.DBPort = envs["DB_PORT"]
+	fmt.Println(Config.Database.DBPort)
 	Config.Database.DBName = envs["DB_NAME"]
 	Config.Database.DBUser = envs["DB_USER"]
 	Config.Database.DBPass = envs["DB_PASS"]
