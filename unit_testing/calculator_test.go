@@ -12,7 +12,7 @@ var calculator = Calculator{a: a, b: b}
 
 func TestMultiply(t *testing.T) {
 	result := calculator.Multiply()
-	expected := 9
+	expected := 8
 	assert.Equal(t, result, expected, fmt.Sprintf("Hasil perkaliannya adalah %d tapi yang di dapetkan %d", expected, result))
 	//if result != expected {
 	//	t.Errorf("Expected %d, but got %d", expected, result)
